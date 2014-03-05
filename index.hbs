@@ -10,12 +10,12 @@
     {{#foreach posts}}
 
     <article itemscope itemtype="http://schema.org/Article" class="{{post_class}}">
-        
+
         <section class="post">
             <header class="post-header">
                 {{! img class="post-avatar" alt="...'s avatar" src="..." height="48" width="48" }}
                 <h2 itemprop="name" class="post-title"><a href="{{url}}">{{title}}</a></h2>
-                <p class="post-meta"><time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span></p>
+                <p class="post-meta"><time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}} | <a href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}">Comments</a></p>
             </header>
             <div itemprop="description" class="post-description">
                 <p>{{excerpt}}&hellip;</p>
@@ -28,4 +28,19 @@
     {{!! After all the posts, we have the previous/next pagination links }}
     {{pagination}}
 
+
+    <script type="text/javascript">
+    var disqus_shortname = 'coronam';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
 </main>

@@ -23,10 +23,10 @@
 
         <section class="post-content">
 
-        <div class="post-share-box">            
+        <div class="post-share-box">
 
             <section class="share">
-                
+
                 <h3>Share this post</h3>
                 <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
@@ -40,7 +40,7 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-                
+
             </section>
 
         </div>
@@ -48,20 +48,15 @@
         <div itemprop="articleBody">
             {{content}}
         </div>
-        
+
         </section>
 
-        <!-- REMOVE THIS LINE TO ENABLE DISQUS COMMENTS
         <section class="post-comments">
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE UNCOMMENTING THE THEME * * */
-            var disqus_shortname = 'YOURDISQUSSHORTNAME'; // required: replace example with your forum shortname
-            var disqus_identifier = '{{id}}';  // make sure to use the post.id as an identifier, 
-                                                    //otherwise disqus will use the pages url per default, 
-                                                    //which might be problematic...
+            var disqus_shortname = 'coronam';
+            var disqus_identifier = '{{id}}';
 
-            /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -71,31 +66,6 @@
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </section>
-        REMOVE THIS LINE TO ENABLE DISQUS COMMENTS -->
-
-        <!-- REMOVE THIS LINE TO ENABLE GOOGLE+ COMMENTS
-        <section class="post-comments">
-            <div class="g-comments" data-href="{{@blog.url}}{{url}}" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>
-            <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
-            <noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
-        </section>
-        REMOVE THIS LINE TO ENABLE GOOGLE + COMMENTS -->
-
-        <!-- REMOVE THIS LINE TO ENABLE FACEBOOK COMMENTS
-        <section class="post-comments">
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=###YourAppID###";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-         
-        <div class="fb-comments" data-href="{{@blog.url}}{{url}}" data-width="470"></div>
-        </section>
-        REMOVE THIS LINE TO ENABLE FACEBOOK COMMENTS -->
-
         {{/post}}
 
     </article>
